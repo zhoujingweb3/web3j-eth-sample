@@ -28,7 +28,7 @@
     <version>3.12.0</version>
   </dependency>
   ```
-- Find the required source code
+- Find the feature`s source code that you need
 - Copy the code into your project
 - Configure network nodes (optional)
 - Run and test Ethereum functionality
