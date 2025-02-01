@@ -8,18 +8,7 @@ import java.math.BigInteger;
 import java.security.SignatureException;
 import java.util.Arrays;
 
-public class SignatureUtil {
-    private static final int PRIVATE_KEY_RADIX = 16;
-    private static final int SIGNATURE_BYTE_LENGTH = 65;
-    private static final int V_INDEX = 64;
-    private static final int V_BASE = 27;
-    private static final int V_LOWER_BOUND = 27;
-    private static final int R_START_INDEX = 0;
-    private static final int R_END_INDEX = 32;
-    private static final int S_START_INDEX = 32;
-    private static final int S_END_INDEX = 64;
-    private static final String ADDRESS_PREFIX = "0x";
-
+public class Signature {
     /**
      * Validates a given signature against the specified message and wallet address.
      *
@@ -35,18 +24,18 @@ public class SignatureUtil {
         }
 
         byte[] signatureBytes = Numeric.hexStringToByteArray(signature);
-        if (signatureBytes.length != SIGNATURE_BYTE_LENGTH) {
+        if (signatureBytes.length != CommonConstant.SIGNATURE_BYTE_LENGTH) {
             return false;
         }
 
-        byte v = signatureBytes[V_INDEX];
-        if (v < V_LOWER_BOUND) {
-            v += V_BASE;
+        byte v = signatureBytes[CommonConstant.V_INDEX];
+        if (v < CommonConstant.V_LOWER_BOUND) {
+            v += CommonConstant.V_BASE;
         }
         Sign.SignatureData signatureData = new Sign.SignatureData(
                 v,
-                Arrays.copyOfRange(signatureBytes, R_START_INDEX, R_END_INDEX),
-                Arrays.copyOfRange(signatureBytes, S_START_INDEX, S_END_INDEX)
+                Arrays.copyOfRange(signatureBytes, CommonConstant.R_START_INDEX, CommonConstant.R_END_INDEX),
+                Arrays.copyOfRange(signatureBytes, CommonConstant.S_START_INDEX, CommonConstant.S_END_INDEX)
         );
         BigInteger publicKey;
         try {
@@ -54,7 +43,7 @@ public class SignatureUtil {
         } catch (SignatureException e) {
             return false;
         }
-        String parsedAddress = ADDRESS_PREFIX + Keys.getAddress(publicKey);
+        String parsedAddress = CommonConstant.ADDRESS_PREFIX + Keys.getAddress(publicKey);
         return parsedAddress.equalsIgnoreCase(walletAddress);
     }
 
@@ -67,7 +56,7 @@ public class SignatureUtil {
      * @return              The generated signature as a hexadecimal string.
      */
     public static String signPrefixedMessage(String privateKeyHex, String message) {
-        BigInteger privateKey = new BigInteger(privateKeyHex, PRIVATE_KEY_RADIX);
+        BigInteger privateKey = new BigInteger(privateKeyHex, CommonConstant.PRIVATE_KEY_RADIX);
 
         ECKeyPair keyPair = ECKeyPair.create(privateKey);
         Sign.SignatureData signatureData = Sign.signPrefixedMessage(message.getBytes(), keyPair);
@@ -75,20 +64,6 @@ public class SignatureUtil {
         return Numeric.toHexStringNoPrefix(signatureData.getR()) +
                 Numeric.toHexStringNoPrefix(signatureData.getS()) +
                 Numeric.toHexStringNoPrefix(signatureData.getV());
-    }
-
-    /**
-     * Generates a wallet address from a given private key.
-     *
-     * @param privateKeyHex The private key in hexadecimal format.
-     * @return              The generated Ethereum wallet address.
-     */
-    public static String getWalletAddressFromPrivateKeyHex(String privateKeyHex){
-        BigInteger privateKey = new BigInteger(privateKeyHex, PRIVATE_KEY_RADIX);
-        // Create an ECKeyPair object
-        ECKeyPair keyPair = ECKeyPair.create(privateKey);
-        // Generate a wallet address from the privateKey
-        return ADDRESS_PREFIX + Keys.getAddress(keyPair.getPublicKey());
     }
 
     public static void main(String[] args) {
@@ -102,7 +77,7 @@ public class SignatureUtil {
         String signature = signPrefixedMessage(privateKeyHex, message);
 
         // Generate a wallet address from the privateKey
-        String walletAddress = getWalletAddressFromPrivateKeyHex(privateKeyHex);
+        String walletAddress = Wallet.getWalletAddressFromPrivateKeyHex(privateKeyHex);
 
         // Validate the signature
         boolean isValid = isSignatureValid(signature, message, walletAddress);

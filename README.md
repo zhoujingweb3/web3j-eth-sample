@@ -34,7 +34,8 @@
 - Run and test
 
 ## Sample List
-- [Signature](src/main/java/SignatureUtil.java)
+- [Wallet](src/main/java/Wallet.java)
+- [Signature](src/main/java/Signature.java)
 
 ## Contribution Guidelines
 If you have any suggestions for improvements, feel free to submit an Issue or Pull Request.

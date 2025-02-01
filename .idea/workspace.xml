@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cc777547-5102-461f-941a-2c724ee3b593" name="Changes" comment="fix: bad translation in readme">
+    <list default="true" id="cc777547-5102-461f-941a-2c724ee3b593" name="Changes" comment="fix: bad translation in comment">
+      <change afterPath="$PROJECT_DIR$/src/main/java/CommonConstant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Wallet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.zh.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.zh.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SignatureUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SignatureUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SignatureUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Signature.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,10 +53,20 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\coding\web3\code\web3j-eth-sample" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
   </component>
-  <component name="RunManager">
-    <configuration name="SignatureUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="SignatureUtil" />
+  <component name="RunManager" selected="Application.SignatureUtil">
+    <configuration name="Signature" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Signature" />
+      <module name="web3j-eth-sample" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Wallet" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Wallet" />
       <module name="web3j-eth-sample" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -63,6 +75,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.SignatureUtil" />
+        <item itemvalue="Application.WalletUtil" />
       </list>
     </recent_temporary>
   </component>
@@ -107,7 +120,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738386710555</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="fix: bad translation in comment">
+      <option name="closed" value="true" />
+      <created>1738390637346</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1738390637346</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -126,6 +147,7 @@
     <MESSAGE value="feat: add English version readme" />
     <MESSAGE value="fix: add comment in pom.xml about org.apache.commons" />
     <MESSAGE value="fix: bad translation in readme" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: bad translation in readme" />
+    <MESSAGE value="fix: bad translation in comment" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: bad translation in comment" />
   </component>
 </project>
