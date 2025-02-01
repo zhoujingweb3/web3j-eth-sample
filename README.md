@@ -28,12 +28,12 @@
     <version>3.12.0</version>
   </dependency>
   ```
-- Find the feature`s source code that you need
+- Find the sample code that you need
 - Copy the code into your project
 - Configure network nodes (optional)
-- Run and test Ethereum functionality
+- Run and test
 
-## Feature List
+## Sample List
 - [Signature](src/main/java/SignatureUtil.java)
 
 ## Contribution Guidelines

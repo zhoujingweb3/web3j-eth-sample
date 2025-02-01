@@ -59,7 +59,7 @@ public class SignatureUtil {
     }
 
     /**
-     * Signs a message using a given ECKeyPair and returns the signature in hexadecimal format.
+     * Signs a message using a given private key and returns the signature in hexadecimal format.
      * This function applies the Ethereum-specific prefix to the message before signing.
      *
      * @param privateKeyHex The private key in hexadecimal format.

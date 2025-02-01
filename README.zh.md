@@ -28,10 +28,10 @@
     <version>3.12.0</version>
   </dependency>
   ```
-- 找到所需的功能源码
+- 找到所需的功能或应用场景的示例代码
 - 复制代码至您的项目
 - 配置网络节点（可选）
-- 运行并测试以太坊功能
+- 运行并测试
 
 ## 功能列表
 - [签名](src/main/java/SignatureUtil.java)

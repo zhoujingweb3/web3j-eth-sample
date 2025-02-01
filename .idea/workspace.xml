@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cc777547-5102-461f-941a-2c724ee3b593" name="Changes" comment="fix: add comment in pom.xml about org.apache.commons">
+    <list default="true" id="cc777547-5102-461f-941a-2c724ee3b593" name="Changes" comment="fix: bad translation in readme">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.zh.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.zh.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SignatureUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SignatureUtil.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +99,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738386579498</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="fix: bad translation in readme">
+      <option name="closed" value="true" />
+      <created>1738386710555</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1738386710555</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -114,6 +125,7 @@
     <MESSAGE value="feat: sign message and valid signature" />
     <MESSAGE value="feat: add English version readme" />
     <MESSAGE value="fix: add comment in pom.xml about org.apache.commons" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: add comment in pom.xml about org.apache.commons" />
+    <MESSAGE value="fix: bad translation in readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: bad translation in readme" />
   </component>
 </project>
