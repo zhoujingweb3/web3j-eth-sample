@@ -41,4 +41,4 @@
 If you have any suggestions for improvements, feel free to submit an Issue or Pull Request.
 
 ## License
-This project is a sample project and allows anyone to freely use, modify, and distribute the code without any restrictions.
+Apache 2.0

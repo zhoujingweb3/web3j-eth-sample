@@ -67,8 +67,9 @@ public class Signature {
     }
 
     public static void main(String[] args) {
-        // Define the private key, change to your own private key
-        String privateKeyHex = "4c0883a69102937d6231471b5dbb6204fe5129617082794b67c64c2289df5dc4";
+        // Define the private key and wallet address, change to your own
+        String privateKeyHex = "ad6bfebb055780013c24afdd167cceb96ef89ddf9e4eb8615a99e573531407b5";
+        String walletAddress = "0x4dc2739b3de594754066357e54bfce70167b3f99";
 
         // Define the message to be signed
         String message = "2778f9e5-5992-4b06-8a8f-85135d687cff";
@@ -76,14 +77,10 @@ public class Signature {
         // Sign the message using the private key
         String signature = signPrefixedMessage(privateKeyHex, message);
 
-        // Generate a wallet address from the privateKey
-        String walletAddress = Wallet.getWalletAddressFromPrivateKeyHex(privateKeyHex);
-
         // Validate the signature
         boolean isValid = isSignatureValid(signature, message, walletAddress);
 
         // Print the results
-        System.out.println("Generated Wallet Address: " + walletAddress);
         System.out.println("Signature: " + signature);
         System.out.println("Is signature valid: " + isValid);
     }
