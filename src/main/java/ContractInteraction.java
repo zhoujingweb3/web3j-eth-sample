@@ -23,15 +23,21 @@ import java.util.List;
 
 public class ContractInteraction {
 
-    private static final String RPC_URL = "RPC_URL"; // test rpc url https://sepolia.optimism.io
+    private static final String RPC_URL = "RPC_URL"; // Test RPC URL, e.g., https://sepolia.optimism.io
     private static final String PRIVATE_KEY = "YOUR_PRIVATE_KEY";
-    private static final String CONTRACT_ADDRESS = "CONTRACT_ADDRESS"; // test contract address 0xE31dc4a51eFdb2675f4F3AC3cBe37097756F2913
+    private static final String CONTRACT_ADDRESS = "CONTRACT_ADDRESS"; // Test contract address 0xE31dc4a51eFdb2675f4F3AC3cBe37097756F2913
 
     private static final Web3j web3j = Web3j.build(new HttpService(RPC_URL));
     private static final Credentials credentials = Credentials.create(PRIVATE_KEY);
 
     /**
-     * 调用智能合约的 view 方法 (不会修改状态)
+     * Calls a view function of a smart contract (does not modify the blockchain state).
+     *
+     * @param functionName    The name of the contract function to call.
+     * @param inputParameters The input parameters required by the function.
+     * @param outputParameters The expected output types of the function.
+     * @return The raw response value from the contract call.
+     * @throws IOException If an error occurs while executing the request.
      */
     public static String callContract(String functionName, List<Type> inputParameters, List<TypeReference<?>> outputParameters) throws IOException {
         Function function = new Function(functionName, inputParameters, outputParameters);
@@ -46,18 +52,24 @@ public class ContractInteraction {
     }
 
     /**
-     * 调用智能合约的 set 方法 (会修改状态)
+     * Sends a transaction to execute a function on the smart contract (modifies the blockchain state).
+     *
+     * @param functionName    The name of the contract function to execute.
+     * @param inputParameters The input parameters required by the function.
+     * @param outputParameters The expected output types of the function (usually empty for transactions).
+     * @return The transaction hash of the submitted transaction.
+     * @throws Exception If an error occurs while sending the transaction.
      */
     public static String sendTransaction(String functionName, List<Type> inputParameters, List<TypeReference<?>> outputParameters) throws Exception {
-        // 构造合约调用方法
+        // Construct the function call
         Function function = new Function(functionName, inputParameters, outputParameters);
         String encodedFunction = FunctionEncoder.encode(function);
 
-        // 获取 Chain ID
+        // Retrieve Chain ID
         EthChainId chainIdResponse = web3j.ethChainId().send();
         BigInteger chainId = chainIdResponse.getChainId();
 
-        // 使用 RawTransactionManager 发送交易
+        // Use RawTransactionManager to send the transaction
         RawTransactionManager transactionManager = new RawTransactionManager(web3j, credentials, chainId.longValue());
 
         EthSendTransaction transactionResponse = transactionManager.sendTransaction(
@@ -68,7 +80,7 @@ public class ContractInteraction {
                 BigInteger.ZERO
         );
 
-        // 检查交易是否有错误
+        // Check for transaction errors
         if (transactionResponse.hasError()) {
             throw new RuntimeException("Error sending transaction: " + transactionResponse.getError().getMessage());
         }
@@ -77,26 +89,27 @@ public class ContractInteraction {
     }
 
     public static void main(String[] args) throws Exception {
-        // 读取合约初始值
+        // Retrieve initial contract value
         String resultBefore = callContract("getValue",
                 Collections.emptyList(),
                 Arrays.asList(new TypeReference<Uint256>() {}));
         System.out.println("Value before transaction: " + resultBefore);
 
-        // 构建输入参数，你如果想要传递更多类型的参数，请选择org.web3j.abi.datatypes中的类型作为参数类型
+        // Construct input parameters (choose the appropriate data type from org.web3j.abi.datatypes)
         List<Type> inputParameters = new ArrayList<>();
         Uint256 value = new Uint256(BigInteger.valueOf(6));
         inputParameters.add(value);
-        // 发送交易，修改值为 value
+
+        // Send transaction to modify the contract state
         String txHash = sendTransaction("setValue",
                 inputParameters,
                 Collections.emptyList());
         System.out.println("Transaction sent! Tx Hash: " + txHash);
 
-        // 等待交易确认（可以手动检查区块链浏览器）
-        Thread.sleep(15000); // 15 秒等待时间
+        // Wait for the transaction to be confirmed (you can also check manually on a blockchain explorer)
+        Thread.sleep(15000); // 15 seconds wait time
 
-        // 读取合约值
+        // Retrieve contract value after the transaction
         String resultAfter = callContract("getValue",
                 Collections.emptyList(),
                 Arrays.asList(new TypeReference<Uint256>() {}));
