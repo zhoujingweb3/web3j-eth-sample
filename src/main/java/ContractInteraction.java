@@ -25,7 +25,7 @@ public class ContractInteraction {
 
     private static final String RPC_URL = "RPC_URL"; // Test RPC URL, e.g., https://sepolia.optimism.io
     private static final String PRIVATE_KEY = "YOUR_PRIVATE_KEY";
-    private static final String CONTRACT_ADDRESS = "CONTRACT_ADDRESS"; // Test contract address 0xE31dc4a51eFdb2675f4F3AC3cBe37097756F2913
+    private static final String CONTRACT_ADDRESS = "CONTRACT_ADDRESS"; // Test contract address 0x833C27F4BFB4c1Eea93c747C3f5ECcf060c1B79d
 
     private static final Web3j web3j = Web3j.build(new HttpService(RPC_URL));
     private static final Credentials credentials = Credentials.create(PRIVATE_KEY);
