@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cc777547-5102-461f-941a-2c724ee3b593" name="Changes" comment="feat: event listener">
+    <list default="true" id="cc777547-5102-461f-941a-2c724ee3b593" name="Changes" comment="feat: add doc about wallet.java">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Transfer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Transfer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.zh.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.zh.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -235,7 +236,23 @@
       <option name="project" value="LOCAL" />
       <updated>1740801802889</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="feat: add getETHBalance() in Transfer.java">
+      <option name="closed" value="true" />
+      <created>1741176403698</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1741176403698</updated>
+    </task>
+    <task id="LOCAL-00018" summary="feat: add doc about wallet.java">
+      <option name="closed" value="true" />
+      <created>1741177565030</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1741177565030</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -274,6 +291,8 @@
     <MESSAGE value="feat: doc of contract interaction" />
     <MESSAGE value="feat: English version doc of contract interaction" />
     <MESSAGE value="feat: event listener" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: event listener" />
+    <MESSAGE value="feat: add getETHBalance() in Transfer.java" />
+    <MESSAGE value="feat: add doc about wallet.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add doc about wallet.java" />
   </component>
 </project>

@@ -33,8 +33,8 @@
 - 配置网络节点（可选）
 - 运行并测试
 
-## 功能列表
-- [钱包](src/main/java/Wallet.java)
+## 示例
+- 钱包操作 [代码](src/main/java/Wallet.java) [文档](src/main/resources/Blog/Wallet.zh.md)
 - [签名](src/main/java/Signature.java)
 - [转账](src/main/java/Transfer.java)
 - [合约调用](src/main/java/ContractInteraction.java)

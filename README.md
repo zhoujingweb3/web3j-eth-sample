@@ -34,7 +34,7 @@
 - Run and test
 
 ## Sample List
-- [Wallet](src/main/java/Wallet.java)
+- Wallet Operations [Code](src/main/java/Wallet.java) [Doc](src/main/resources/Blog/Wallet.md)
 - [Signature](src/main/java/Signature.java)
 - [Transfer](src/main/java/Transfer.java)
 - [ContractInteraction](src/main/java/ContractInteraction.java)
