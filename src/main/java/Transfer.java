@@ -16,6 +16,24 @@ import java.math.BigDecimal;
 import java.math.BigInteger;
 
 public class Transfer {
+
+    private static final String RPC_URL = "RPC_URL"; // Test RPC URL, e.g., https://sepolia.optimism.io
+    private static final Web3j web3j = Web3j.build(new HttpService(RPC_URL));
+
+    /**
+     * Retrieves the Ether balance of the given Ethereum address.
+     *
+     * @param address The Ethereum address whose balance is to be retrieved.
+     * @return The balance in Ether as a BigDecimal.
+     * @throws IOException If there is an issue communicating with the Ethereum node.
+     */
+    public static BigDecimal getETHBalance(String address) throws IOException {
+        // Retrieve balance in Wei
+        BigInteger balanceInWei = web3j.ethGetBalance(address, DefaultBlockParameterName.LATEST).send().getBalance();
+        // Convert Wei to Ether
+        return Convert.fromWei(new BigDecimal(balanceInWei), Convert.Unit.ETHER);
+    }
+
     /**
      * Transfers Ether from a sender's account to a recipient's account.
      *
@@ -26,10 +44,6 @@ public class Transfer {
      * @throws IOException If there is an issue communicating with the Ethereum node.
      */
     public static String transfer(String senderPrivateKey, String recipientAddress, BigDecimal amountInEther) throws IOException {
-        /* Network Configuration. In practice, you should config this once and reuse it. */
-        String rpcUrl = "YOUR_RPC_NODE_URL";
-        // Connect to the Ethereum network.
-        Web3j web3j = Web3j.build(new HttpService(rpcUrl));
         // Retrieve the chain ID of the connected network
         EthChainId chainIdResponse = web3j.ethChainId().send();
         long chainId = chainIdResponse.getChainId().longValue();
@@ -72,8 +86,20 @@ public class Transfer {
         String recipientAddress = "YOUR_RECIPIENT_ADDRESS";
         // The transfer amount in Ether
         BigDecimal amountInEther = new BigDecimal("0.001");
+
+        //Balance of recipient address before transfer
+        BigDecimal before = getETHBalance(recipientAddress);
+        System.out.println("Balance of recipient address before transfer: " + before);
+
         // Perform the transfer
         String transactionHash = Transfer.transfer(privateKey, recipientAddress, amountInEther);
         System.out.println("Transaction Hash: " + transactionHash);
+
+        // Wait for the transaction to be confirmed (you can also check manually on a blockchain explorer)
+        Thread.sleep(15000); // 15 seconds wait time
+
+        //Balance of recipient address before transfer
+        BigDecimal after = getETHBalance(recipientAddress);
+        System.out.println("Balance of recipient address after transfer: " + after);
     }
 }
