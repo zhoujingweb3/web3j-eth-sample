@@ -35,7 +35,7 @@
 
 ## 示例
 - 钱包操作 [代码](src/main/java/Wallet.java) [文档](src/main/resources/Blog/Wallet.zh.md)
-- [签名](src/main/java/Signature.java)
+- 签名和验证 [Code](src/main/java/Signature.java) [Doc](src/main/resources/Blog/Signature.md)
 - [转账](src/main/java/Transfer.java)
 - [合约调用](src/main/java/ContractInteraction.java)
 - [链上事件监听](src/main/java/EventListener.java)

@@ -35,7 +35,7 @@
 
 ## Sample List
 - Wallet Operations [Code](src/main/java/Wallet.java) [Doc](src/main/resources/Blog/Wallet.md)
-- [Signature](src/main/java/Signature.java)
+- Signature and Verification [Code](src/main/java/Signature.java) [Doc](src/main/resources/Blog/Signature.md)
 - [Transfer](src/main/java/Transfer.java)
 - [ContractInteraction](src/main/java/ContractInteraction.java)
 - [EventListener](src/main/java/EventListener.java)

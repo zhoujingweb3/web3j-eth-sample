@@ -1,7 +1,7 @@
 # Ethereum Wallet Operations in Java
 🌍 **Languages:** [English](Wallet.md) | [简体中文](Wallet.zh.md)
 
-Web3j is a very useful tool, but it can be a bit complex to use. Therefore, I have written some usage examples in the hope that they will be helpful to everyone.  
+Web3j is a very useful tool, but it can be a bit complex to use. Therefore, I have written some usage examples that might help you.  
 This chapter focuses on wallet-related operations.
 
 ## Dependencies
@@ -90,4 +90,3 @@ public static boolean isValidPrivateKey(String privateKey) {
 ```
 ## Sample Code
 [Wallet](../../java/Wallet.java)
-
