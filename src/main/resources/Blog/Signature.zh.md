@@ -1,7 +1,6 @@
-# Ethereum Message Signing and Verification in Java
+# Java中如何实现以太坊消息签名及验证
 🌍 **Languages:** [English](Signature.md) | [简体中文](Signature.zh.md)
 
-# Java中如何实现以太坊消息签名及验证
 Web3j是一个很好用的工具，但是使用起来有点复杂，因此我写了一些使用示例，希望可以帮到各位。
 完整示例代码仓库地址：[web3j-eth-sample](https://github.com/zhoujingweb3/web3j-eth-sample)
 本章主要是消息签名及验证。
@@ -100,5 +99,5 @@ public class CommonConstant {
     }
 ```
 
-## Sample Code
+## 示例代码
 [Signature](../../java/Signature.java)
