@@ -1,6 +1,6 @@
 # How to Transfer ETH in Java
 
-🌍 **Languages:** [English](Transfer.md) | [Simplified Chinese](Transfer.zh.md)
+🌍 **Languages:** [English](Transfer.md) | [简体中文](Transfer.zh.md)
 
 Web3j is a powerful tool, but it can be somewhat complex to use. Therefore, I have provided some usage examples to help you get started.
 
