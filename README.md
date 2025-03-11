@@ -36,9 +36,9 @@
 ## Sample List
 - Wallet Operations [Code](src/main/java/Wallet.java) [Doc](src/main/resources/Blog/Wallet.md)
 - Signature and Verification [Code](src/main/java/Signature.java) [Doc](src/main/resources/Blog/Signature.md)
-- [Transfer](src/main/java/Transfer.java)
-- [ContractInteraction](src/main/java/ContractInteraction.java)
-- [EventListener](src/main/java/EventListener.java)
+- Check Balance and Transfer ETH [Code](src/main/java/Transfer.java) [Doc](src/main/resources/Blog/Transfer.md)
+- Calling Ethereum Smart Contracts [Code](src/main/java/ContractInteraction.java) [Doc](src/main/resources/Blog/ContractInteraction.md)
+- Listening to Ethereum On-Chain Events [Code](src/main/java/EventListener.java) [Doc](src/main/resources/Blog/EventListener.md)
 
 ## Contribution Guidelines
 If you have any suggestions for improvements, feel free to submit an Issue or Pull Request.

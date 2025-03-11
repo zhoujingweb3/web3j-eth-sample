@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cc777547-5102-461f-941a-2c724ee3b593" name="Changes" comment="feat: add doc of ContractInteraction">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Blog/EventListener.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Blog/EventListener.zh.md" afterDir="false" />
+    <list default="true" id="cc777547-5102-461f-941a-2c724ee3b593" name="Changes" comment="feat: add doc of EventListener">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.zh.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.zh.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -284,7 +284,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741694373344</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="feat: add doc of EventListener">
+      <option name="closed" value="true" />
+      <created>1741694655096</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1741694655096</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -329,6 +337,7 @@
     <MESSAGE value="fix: language version mistake" />
     <MESSAGE value="feat: add doc of Transfer" />
     <MESSAGE value="feat: add doc of ContractInteraction" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add doc of ContractInteraction" />
+    <MESSAGE value="feat: add doc of EventListener" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add doc of EventListener" />
   </component>
 </project>

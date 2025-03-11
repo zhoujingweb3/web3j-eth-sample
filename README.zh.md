@@ -36,9 +36,9 @@
 ## 示例
 - 钱包操作 [代码](src/main/java/Wallet.java) [文档](src/main/resources/Blog/Wallet.zh.md)
 - 签名和验证 [Code](src/main/java/Signature.java) [Doc](src/main/resources/Blog/Signature.md)
-- [转账](src/main/java/Transfer.java)
-- [合约调用](src/main/java/ContractInteraction.java)
-- [链上事件监听](src/main/java/EventListener.java)
+- 余额查询和发送ETH [Code](src/main/java/Transfer.java) [Doc](src/main/resources/Blog/Transfer.md)
+- 调用以太坊智能合约 [Code](src/main/java/ContractInteraction.java) [Doc](src/main/resources/Blog/ContractInteraction.md)
+- 监听以太坊链上事件 [Code](src/main/java/EventListener.java) [Doc](src/main/resources/Blog/EventListener.md)
 
 ## 贡献指南
 如果您有任何改进建议，欢迎提交 Issue 或 Pull Request。
