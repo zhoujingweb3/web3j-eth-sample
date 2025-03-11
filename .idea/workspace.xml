@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cc777547-5102-461f-941a-2c724ee3b593" name="Changes" comment="feat: add doc about wallet.java">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Blog/Signature.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Blog/Signature.zh.md" afterDir="false" />
+    <list default="true" id="cc777547-5102-461f-941a-2c724ee3b593" name="Changes" comment="feat: add doc about Signature.java">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.zh.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.zh.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Blog/Wallet.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Blog/Wallet.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Blog/Signature.zh.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Blog/Signature.zh.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,14 +37,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "D:/coding/web3/code/web3j-eth-sample/src/main/resources/Blog"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/coding/web3/code/web3j-eth-sample/src/main/resources/Blog&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\coding\web3\code\web3j-eth-sample\src\main\resources\Blog" />
@@ -256,7 +252,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741177565030</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="feat: add doc about Signature.java">
+      <option name="closed" value="true" />
+      <created>1741604506959</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1741604506959</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -297,6 +301,7 @@
     <MESSAGE value="feat: event listener" />
     <MESSAGE value="feat: add getETHBalance() in Transfer.java" />
     <MESSAGE value="feat: add doc about wallet.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add doc about wallet.java" />
+    <MESSAGE value="feat: add doc about Signature.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add doc about Signature.java" />
   </component>
 </project>

@@ -1,5 +1,5 @@
 # Ethereum Message Signing and Verification in Java
-🌍 **Languages:** [English](Signature.zh.md) | [简体中文](Signature.md)
+🌍 **Languages:** [English](Signature.md) | [简体中文](Signature.zh.md)
 
 # Java中如何实现以太坊消息签名及验证
 Web3j是一个很好用的工具，但是使用起来有点复杂，因此我写了一些使用示例，希望可以帮到各位。
