@@ -7,6 +7,10 @@
   <name>web3j-eth-sample</name>
   <url>http://maven.apache.org</url>
 
+  <properties>
+    <maven.compiler.release>21</maven.compiler.release>
+  </properties>
+
   <dependencies>
     <!--web3j-->
     <dependency>
@@ -27,9 +31,9 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.13.0</version>
         <configuration>
-          <source>8</source>
-          <target>8</target>
+          <release>${maven.compiler.release}</release>
         </configuration>
       </plugin>
     </plugins>
